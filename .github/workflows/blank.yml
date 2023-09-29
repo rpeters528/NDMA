@@ -1,0 +1,85 @@
+<h1>NDMA Event Registration</h1>
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Include necessary CSS and JavaScript libraries -->
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <h1>Motocross Event Registration</h1>
+    <form id="registrationForm">
+        <div>
+            <label>
+                <input type="radio" name="racerType" value="racer"> Racer
+            </label>
+            <label>
+                <input type="radio" name="racerType" value="nonRacer"> Non-Racer (Parent signing up a child)
+            </label>
+        </div>
+        <div id="nonRacerInfoContainer" style="display: none;">
+            <!-- Non-Racer information fields -->
+            <div class="nonRacerInfo">
+                <h2>Non-Racer Information</h2>
+                <input type="text" placeholder="First Name" name="nonRacerFirstName">
+                <input type="text" placeholder="Last Name" name="nonRacerLastName">
+                <button type="button" id="continueAsNonRacer">Continue</button>
+            </div>
+        </div>
+        <div id="riderInfoContainer" style="display: none;">
+            <!-- Rider information fields -->
+            <div class="riderInfo">
+                <h2>Rider Information</h2>
+                <input type="text" placeholder="First Name" name="riderFirstName[]">
+                <input type="text" placeholder="Last Name" name="riderLastName[]">
+                <input type="date" name="birthdate[]">
+                <input type="text" placeholder="Rider Number" name="riderNumber[]">
+                <select name="classes[]" class="classSelect" multiple="multiple">
+                    <option value="50 Beginner">50 Beginner</option>
+                    <option value="50 B">50 B</option>
+                    <option value="50 A">50 A</option>
+                    <option value="65 B">65 B</option>
+                    <option value="65 A">65 A</option>
+                    <option value="85 B">85 B</option>
+                    <option value="85 A">85 A</option>
+                    <option value="65/85 Beginner">65/85 Beginner</option>
+                    <option value="Girls">Girls</option>
+                    <option value="Women's">Women's</option>
+                    <option value="2 Stroke">2 Stroke</option>
+                    <option value="250 A">250 A</option>
+                    <option value="250 B">250 B</option>
+                    <option value="250 C">250 C</option>
+                    <option value="450 A">450 A</option>
+                    <option value="450 B">450 B</option>
+                    <option value="450 C">450 C</option>
+                    <option value="Open A">Open A</option>
+                    <option value="Open B">Open B</option>
+                    <option value="Open C">Open C</option>
+                    <option value="Vet A">Vet A</option>
+                    <option value="Vet B">Vet B</option>
+                    <option value="Vet C">Vet C</option>
+                    <!-- Add other class options here -->
+                </select>
+                <button type="button" class="addClassBtn">Add Class</button>
+                <ul class="selectedClasses"></ul>
+            </div>
+            <div id="additionalRiders">
+                <!-- Additional Rider ID Information boxes will be added here -->
+            </div>
+            <button type="button" id="addRider">Add Rider</button>
+        </div>
+        <div id="summaryContainer" style="display: none;">
+            <h2>Registration Summary</h2>
+            <div id="riderSummary">
+                <!-- Rider information summary will be displayed here -->
+            </div>
+        </div>
+        <div>
+            <button type="submit" id="continueToSummary">Continue</button>
+        </div>
+    </form>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
